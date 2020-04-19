@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<log4j:configuration>
+	
+	<appender name="Debug" class="org.apache.log4j.RollingFileAppender">
+		<param name="File" value="D:/Logger/debug_log.log"/>
+		<param name="MaxFileSize" value="520KB"/>
+		<param name="MaxBackupIndex" value="100000"/>
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{dd:MM:yyyy HH:mm:ss}  %m%n"/>
+		</layout>
+	</appender>
+	
+	<appender name="Info" class="org.apache.log4j.RollingFileAppender">
+		<param name="File" value="D:/Logger/info_log.log"/>
+		<param name="MaxFileSize" value="520KB"/>
+		<param name="MaxBackupIndex" value="100000"/>
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{dd:MM:yyyy HH:mm:ss}  %m%n"/>
+		</layout>
+	</appender>
+	
+	<appender name="Warn" class="org.apache.log4j.RollingFileAppender">
+		<param name="File" value="D:/Logger/warn_log.log"/>
+		<param name="MaxFileSize" value="520KB"/>
+		<param name="MaxBackupIndex" value="100000"/>
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{dd:MM:yyyy HH:mm:ss}  %m%n"/>
+		</layout>
+	</appender>
+	
+	
+	<appender name="Error" class="org.apache.log4j.RollingFileAppender">
+		<param name="File" value="D:/Logger/error_log.log"/>
+		<param name="MaxFileSize" value="520KB"/>
+		<param name="MaxBackupIndex" value="100000"/>
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{dd:MM:yyyy HH:mm:ss}  %m%n"/>
+		</layout>
+	</appender>
+	
+	
+	<appender name="Fatal" class="org.apache.log4j.RollingFileAppender">
+		<param name="File" value="D:/Logger/fatal_log.log"/>
+		<param name="MaxFileSize" value="520KB"/>
+		<param name="MaxBackupIndex" value="100000"/>
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{dd:MM:yyyy HH:mm:ss}  %m%n"/>
+		</layout>
+	</appender>
+	
+	
+	<logger name="DebugLog" additivity="false">
+		<level value="Debug"/>
+		<appender-ref ref="Debug"/>
+	</logger>
+	
+	<logger name="InfoLog" additivity="false">
+		<level value="Info"/>
+		<appender-ref ref="Info"/>
+	</logger>
+	
+	<logger name="WarnLog" additivity="false">
+		<level value="Warn"/>
+		<appender-ref ref="Warn"/>
+	</logger>
+	
+	<logger name="ErrorLog" additivity="false">
+		<level value="Error"/>
+		<appender-ref ref="Error"/>
+	</logger>
+	
+	<logger name="FatalLog" additivity="false">
+		<level value="Fatal"/>
+		<appender-ref ref="Fatal"/>
+	</logger>
+	
+</log4j:configuration>
